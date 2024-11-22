@@ -46,11 +46,7 @@ document.getElementById("boton-calcular").addEventListener("click", function () 
   let msg_extra = `La persona tiene un nivel de peso ${nivel_peso.toLowerCase()}.`;
 
   const alerta = document.getElementById("alerta-mostrar-resultado");
-
-  if (resultado === null) {
-    msg_resultado = `Evidentemente, no sabe usted un huevo de cómo insertar datos en una página web. Inserte los datos de nuevo, bendiciones.`;
-    alerta.classList.replace("alert-success", "alert-danger");
-  }
+  let resultadoOk = resultado === null ? false : true;
 
   if (peso < 45) {
     msg_resultado = "Como que está flaquito el chamaco no... ".concat(msg_resultado);
@@ -58,6 +54,15 @@ document.getElementById("boton-calcular").addEventListener("click", function () 
   if (altura < 1.4) {
     msg_extra = "Qué chiquito jajajajaj... ".concat(msg_extra);
   }
+
+  if (!resultadoOk) {
+    msg_resultado = `Evidentemente, no sabe usted un huevo de cómo insertar datos en una página web. Inserte los datos de nuevo, bendiciones.`;
+    alerta.classList.replace("alert-success", "alert-danger");
+  } else {
+    alerta.classList.remove("alert-danger");
+    alerta.classList.add("alert-success");
+  }
+
   document.getElementById("mostrar-resultado").textContent = msg_resultado;
   document.getElementById("mostrar-info-adicional-peso").textContent = msg_extra;
 
