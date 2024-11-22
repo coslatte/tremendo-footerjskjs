@@ -56,7 +56,7 @@ document.getElementById("boton-calcular").addEventListener("click", function () 
   }
 
   if (!resultadoOk) {
-    msg_resultado = `Evidentemente, no sabe usted un huevo de cómo insertar datos en una página web. Inserte los datos de nuevo, bendiciones.`;
+    msg_resultado = `Evidentemente, no sabe usted un boniatillo de cómo insertar datos en una página web. Inserte los datos de nuevo, bendiciones.`;
     alerta.classList.replace("alert-success", "alert-danger");
   } else {
     alerta.classList.remove("alert-danger");
