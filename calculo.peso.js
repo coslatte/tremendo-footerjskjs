@@ -33,17 +33,17 @@ document.getElementById("boton-calcular").addEventListener("click", function () 
   let nivel_peso = "";
   // Calculando si el manin está bien de peso...
   if (resultado < 18.5) {
-    nivel_peso = "Bajo peso";
+    nivel_peso = "con Bajo peso";
   } else if (resultado >= 18.5 && resultado < 25) {
     nivel_peso = "Saludable";
   } else if (resultado >= 25 && resultado < 30) {
-    nivel_peso = "Sobre peso";
+    nivel_peso = "con Sobre peso";
   } else {
-    nivel_peso = "Obesidad";
+    nivel_peso = "con Obesidad";
   }
 
   let msg_resultado = `El peso calculado es de ${resultado}.`;
-  let msg_extra = `La persona tiene un nivel de peso de ${nivel_peso.toLowerCase()}.`;
+  let msg_extra = `La persona tiene un nivel de peso ${nivel_peso.toLowerCase()}.`;
 
   const alerta = document.getElementById("alerta-mostrar-resultado");
 
