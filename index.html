@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="calculo.peso.js">
+  <link rel="stylesheet" href="estilos.sabrosos.css">
+  <link rel="stylesheet" href="estilos.sabrosos.js">
+  <title>Calculo Índice de Masa Corporal</title>
+</head>
+
+<body>
+  <div id="div-wrapper" class="row">
+    <div class="col"></div>
+    <div class="col-7">
+      <!-- Titulo -->
+      <div id="titulo" class="container">
+        <h1 class="text-white-50 text-center">Cálculo de IMC</h1>
+      </div>
+
+      <!-- Div de la Imagen -->
+      <div id="body" class="container-sm text-center">
+        <div id="div-imagen" class="row">
+          <div class="col"></div>
+          <div class="col-7">
+            <img src="https://felipebernalcirujano.com/wp-content/uploads/2024/07/tipos-de-obesidad-segun-imc.jpg"
+              class="img-thumbnail rounded-5 m-sm-2" alt="Imagen">
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+      <!-- Div de la informacion sobre ICM -->
+      <div class="row">
+        <div class="container my-4 text-center">
+          <div class="card" id="imcCard">
+            <div class="card-body">
+              <h2 class="card-title">Papa, qué huevos es eso de IMC</h2>
+              <p class="card-text">
+                El <strong>Índice de Masa Corporal (IMC)</strong> es una medida utilizada para evaluar si una persona
+                tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en
+                kilogramos por el cuadrado de su altura en metros (kg/m²).
+              </p>
+              <p class="card-text">
+                El IMC es una herramienta útil para estimar la grasa corporal y evaluar los riesgos para la salud
+                relacionados con el peso. Sin embargo, es importante tener en cuenta que el IMC tiene limitaciones y
+                no distingue entre masa muscular y grasa corporal.
+              </p>
+              <p class="card-text">
+                Las categorías generales de IMC son:
+              </p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Bajo peso: IMC menor a 18.5</li>
+                <li class="list-group-item">Peso normal: IMC entre 18.5 y 24.9</li>
+                <li class="list-group-item">Sobrepeso: IMC entre 25 y 29.9</li>
+                <li class="list-group-item">Obesidad: IMC de 30 o mayor</li>
+              </ul>
+              <p class="card-text mt-3">
+                Es importante consultar con un profesional de la salud para una evaluación completa de tu estado de
+                salud y peso, ya que el IMC es solo una de las muchas herramientas utilizadas para evaluar la salud
+                general.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inputs y tal -->
+      <div class="d-grid gap-2">
+        <div class="input-group">
+          <span class="input-group-text" id="addon-peso-persona">Peso</span>
+          <input id="input-peso" type="text" class="form-control" placeholder="Ingrese el peso de la persona (kg)">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text" id="addon-peso-persona">Altura</span>
+          <input id="input-altura" type="text" class="form-control"
+            placeholder="Ingrese la altura de la persona (metros)">
+        </div>
+
+        <!-- Mostrar resultados -->
+        <!-- Nota: En el class, el d-none me permite a mi tener ocultado el componente, y con funciones y cosas en JS puedo mostrarlo again... -->
+        <div id="alerta-mostrar-resultado" class="alert alert-success mt-3 fade d-none" role="alert">
+          <h5 class="alert-heading">Resultado</h5>
+          <p id="mostrar-resultado" class="mb-0">Cálculo de peso...</p>
+          <hr>
+          <p id="mostrar-info-adicional-peso" class="mb-0">Información adicional...</p>
+        </div>
+        <button id="boton-calcular" type="button" class="btn btn-primary">Calcular</button>
+      </div>
+
+
+    </div>
+    <div class="col"></div>
+  </div>
+  <footer class="text-md-center">
+    <p class="fs-3">Tremendo footer socio askldjalksjkds llevo medio dia en esto jjj saludos!
+      ©️©️©️©️©️🗣️🗣️🗣️🗣️©️🔥🔥</p>
+  </footer>
+
+  <script src="calculo.peso.js"></script>
+  <script src="estilos.sabrosos.js"></script>
+</body>
+
+</html>

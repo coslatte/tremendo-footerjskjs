@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, var(--bs-body-bg), var(--bs-secundary-bg-subtle));
+  background-attachment: scroll;
+}
+.content {
+  min-height: 200vh;
+}
+
+.card-body {
+  transition: max-height 0.1s ease-out;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.card-body.expanded {
+  max-height: 1000px;
+  transition: max-height 0.1s ease-in;
+}
